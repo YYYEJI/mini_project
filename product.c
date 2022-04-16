@@ -15,7 +15,7 @@ int selectMenu(){
 }
 int main(){
 	Product p;
-	int cnt = 0, menu, index = 0;
+	int cnt = 0, menu;
 
 	while(1){
 		menu = selectMenu();
