@@ -1,9 +1,16 @@
 CC = gcc
 CFLAGS = -W -Wall
 TARGET = product
-OBJECTS = manager.o manager.h
+OBJECTS = product.o product.h
+DTARGET = manager
+SOBJECTS = main.o manager.o manager.h
+
 all : $(TARGET)
-$(TARGER):$(OBJECTS)
+$(TARGET):$(OBJECTS)
 	$(CC) $(CFLAGS) -o $@ $^
+
+$(DTARGET):$(SOBJECTS)
+	$(CC) $(CFLAGS) -o $@ $^ 
 clean:
 	rm *.o product
+	rm *.o manager
